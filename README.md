@@ -13,6 +13,9 @@ configure privoxy to connect to the domain in dnsmasq-china-list directly.
 ## 用法
 
 下载或更新dnsmasq-china-list配置文件（需要wget）。
+```bash
+./update_dnsmasq-china-list
+```
 
 生成并且安装privoxy的action。
 如果添加`CUSTOM_DOMIN`参数，把`CUSTOM_DOMIN`追加到`custom.txt`。
