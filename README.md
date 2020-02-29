@@ -12,6 +12,8 @@ configure privoxy to connect to the domain in dnsmasq-china-list directly.
 
 ## 用法
 
+下载或更新dnsmasq-china-list配置文件（需要wget）。
+
 生成并且安装privoxy的action。
 如果添加`CUSTOM_DOMIN`参数，把`CUSTOM_DOMIN`追加到`custom.txt`。
 ```bash
@@ -19,28 +21,15 @@ configure privoxy to connect to the domain in dnsmasq-china-list directly.
 ./privoxy2direct .jandan.net
 ```
 
-只生成action文件。
-```bash
-./generate_direct_action
-```
-
 ## usage
+
+download or update dnsmasq-china-list conf files (require wget).
+```bash
+./update_dnsmasq-china-list
+```
 
 generate and install privoxy action. if `CUSTOM_DOMIN` is passed, add `CUSTOM_DOMIN` to `custom.txt`.
 ```bash
 ./privoxy2direct [CUSTOM_DOMIN]
 ./privoxy2direct .jandan.net
 ```
-
-only generate action.
-```bash
-./generate_direct_action
-```
-
-## 注意
-
-需要先安装dnsmasq-china-list（或者你可以自己修改这些简单的shell脚本）。
-
-## note
-
-should install dnsmasq-china-list first (or you can change those simple shell script).
