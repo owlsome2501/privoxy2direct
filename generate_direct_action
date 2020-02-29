@@ -1,18 +1,18 @@
 #!/usr/bin/bash
 
-list_root='/etc/dnsmasq.d'
+script_root=$(dirname "$0")
+
+custom_file="${script_root}/custom.txt"
+template_file="${script_root}/forward_white.action.template"
+
+list_root="$script_root"
 
 domin_list=(
     'apple.china.conf'
     'google.china.conf'
     'accelerated-domains.china.conf')
-
 domin_list=("${domin_list[@]/#/${list_root}/}")
 
-script_root=$(dirname "$0")
-
-custom_file="${script_root}/custom.txt"
-template_file="${script_root}/forward_white.action.template"
 
 {
     cat "$template_file";
