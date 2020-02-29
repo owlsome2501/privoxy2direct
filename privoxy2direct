@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+
+script_root=$(dirname "$0")
+
+custom_file="${script_root}/custom.txt"
+
+if [ ! -z $1 ];then
+    echo "$1" >> "$custom_file"
+fi
+
+./generate_direct_action
+
+sudo cp ./forward_white.action /etc/privoxy/forward_white.action
+
+sudo systemctl restart privoxy

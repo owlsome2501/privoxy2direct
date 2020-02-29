@@ -1,0 +1,9 @@
+{{alias}}
+
+socks5 = +forward-override{forward-socks5 127.0.0.1:1080 .}
+direct = +forward-override{forward .}
+
+{socks5}
+/
+
+{direct}
