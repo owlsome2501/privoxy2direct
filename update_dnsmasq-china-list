@@ -9,5 +9,5 @@ conf_files=(
 conf_files=("${conf_files[@]/#/${url_base}/}")
 
 for conf_file in ${conf_files[@]};do
-    wget -c "$conf_file"
+    wget -N -c "$conf_file"
 done
