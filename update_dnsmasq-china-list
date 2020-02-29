@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+
+url_base='https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master'
+
+conf_files=(
+    'accelerated-domains.china.conf'
+    'apple.china.conf'
+    'google.china.conf')
+conf_files=("${conf_files[@]/#/${url_base}/}")
+
+for conf_file in ${conf_files[@]};do
+    wget -c "$conf_file"
+done

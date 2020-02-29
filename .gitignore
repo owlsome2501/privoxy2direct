@@ -1,2 +1,3 @@
-forward_white.action
+*.action
+*.conf
 custom.txt
