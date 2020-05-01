@@ -9,7 +9,7 @@ list_root="$script_root"
 
 domin_list=(
     'apple.china.conf'
-    'google.china.conf'
+    # 'google.china.conf'
     'accelerated-domains.china.conf')
 domin_list=("${domin_list[@]/#/${list_root}/}")
 

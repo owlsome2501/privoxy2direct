@@ -6,8 +6,8 @@ conf_files=(
     'accelerated-domains.china.conf'
     'apple.china.conf'
     'google.china.conf')
-conf_files=("${conf_files[@]/#/${url_base}/}")
+# conf_urls=("${conf_files[@]/#/${url_base}/}")
 
 for conf_file in ${conf_files[@]};do
-    wget -N -c "$conf_file"
+    wget "$url_base/$conf_file" -O "$conf_file"
 done
